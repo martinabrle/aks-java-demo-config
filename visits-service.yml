@@ -28,6 +28,20 @@ spring:
       on-profile: azure-aks
   zipkin:
     baseUrl: http://tracing-server:9411
+  datasource:
+    url: ${SPRING_DATASOURCE_URL}?sslmode=verify-full&sslrootcert=DigiCertGlobalRootCA.crt.pem
+    username: ${SPRING_DATASOURCE_USERNAME}
+    azure.passwordless-enabled: true
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: ${SPRING_DATASOURCE_SHOW_SQL}
+    hibernate:
+      ddl-auto: validate
+  # sql:
+  #   init:
+  #     schema-locations: classpath*:db/pgsql/schema.sql
+  #     data-locations: classpath*:db/pgsql/data.sql
+  #     init: ALWAYS
 server:
   port: 8082
 eureka:
