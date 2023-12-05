@@ -8,6 +8,8 @@ server:
 
 # embedded database init, supports mysql too trough the 'mysql' spring profile
 spring:
+  profiles:
+    active: azure-aks
   sql:
     init:
       schema-locations: classpath*:db/hsqldb/schema.sql
