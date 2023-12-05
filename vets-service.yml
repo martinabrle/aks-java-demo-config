@@ -35,7 +35,7 @@ spring:
   zipkin:
     baseUrl: http://tracing-server:9411
   datasource:
-    url: ${SPRING_DATASOURCE_URL}?sslmode=verify-full&sslrootcert=DigiCertGlobalRootCA.crt.pem
+    jdbc-url: ${SPRING_DATASOURCE_URL}?sslmode=verify-full&sslrootcert=DigiCertGlobalRootCA.crt.pem
     username: ${SPRING_DATASOURCE_USERNAME}
     azure.passwordless-enabled: true
   jpa:
