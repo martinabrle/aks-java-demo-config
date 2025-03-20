@@ -6,7 +6,7 @@ zuul:
     visits-service: /visit/**
     owners-service:
       path: /owners/**
-      url: http://customers-service:80/customer
+      url: forward:/customer/owners
     # app requests GET and POST to https://pet-clinic.*.com/api/gateway/owners/7
     customers-service: /customer/**
     api-gateway: /gateway/**
