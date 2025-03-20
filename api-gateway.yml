@@ -4,12 +4,12 @@ zuul:
   routes:
     vets-service: /vet/**
     visits-service: /visit/**
-    customers-service: /customer/**
-    api-gateway: /gateway/**
     owners-service:
       path: /owners/**
-      url: forward:/customer/owners/
-
+      url: http://customer-service:80/customer/owners/
+    # app requests GET and POST to https://pet-clinic.*.com/api/gateway/owners/7
+    customers-service: /customer/**
+    api-gateway: /gateway/**
 server:
   port: 8080
   compression:
