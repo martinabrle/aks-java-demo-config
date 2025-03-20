@@ -4,8 +4,12 @@ zuul:
   routes:
     vets-service: /vet/**
     visits-service: /visit/**
-    customers-service: /customer/**
+    customers-service: /customer/**, /owners/**
     api-gateway: /gateway/**
+    # owners-service:
+    #   path: /owners/**
+    #   serviceId: owners-service
+    #   uri: http://customers-service:80
 
 server:
   port: 8080
