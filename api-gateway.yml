@@ -7,7 +7,11 @@ zuul:
     owners-service:
       path: /owners/**
       url: forward:/customer/owners
+    gateway-owners-service:
+      path: /gateway/owners/**
+      url: forward:/customer/owners
     # app requests GET and POST to https://pet-clinic.*.com/api/gateway/owners/7
+    # and it needs to be transformed into https://pet-clinic.*.com/api/customer/owners
     customers-service: /customer/**
     api-gateway: /gateway/**
 server:
