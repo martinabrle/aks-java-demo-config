@@ -9,7 +9,7 @@ zuul:
     owners-service:
       path: /owners/**
       serviceId: owners-service
-      uri: http://customers-service:80
+      url: forward:/customers-service
 
 server:
   port: 8080
