@@ -8,8 +8,7 @@ zuul:
     api-gateway: /gateway/**
     owners-service:
       path: /owners/**
-      serviceId: owners-service
-      url: http://customers-service:80
+      url: forward:/customer
 
 server:
   port: 8080
