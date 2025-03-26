@@ -25,7 +25,7 @@ spring:
   messages:
     basename: messages/messages # Internationalization
   zipkin:
-    baseUrl: http://tracing-server:80 #orig: 9411
+    baseUrl: http://tracing-server:9411 #orig: 9411
 
 management:
   tracing:
@@ -33,9 +33,9 @@ management:
       probability: 1.0 # only for testing purpose, switch back to 0.1 for production code
   zipkin:
     tracing:
-      endpoint: http://tracing-server:80/api/v2/spans #orig: 9411
+      endpoint: http://tracing-server:9411/api/v2/spans #orig: 9411
 
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://discovery-server:80/eureka/ #orig: 8761
+      defaultZone: http://discovery-server:8761/eureka/ #orig: 8761
